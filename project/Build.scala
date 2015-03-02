@@ -9,14 +9,15 @@ object Build extends Build {
     name                 := "eventstore-client",
     organization         := "pl.newicom.dddd",
     scalaVersion         := "2.11.5",
-    crossScalaVersions   := Seq("2.10.4", "2.11.5"),
     licenses             := Seq("BSD 3-Clause" -> url("http://raw.github.com/EventStore/EventStore.JVM/master/LICENSE")),
     homepage             := Some(new URL("http://github.com/pawelkaczor/EventStore.JVM")),
     description          := "Event Store JVM Client",
     startYear            := Some(2013),
     scalacOptions        := Seq("-encoding", "UTF-8", "-unchecked", "-deprecation", "-feature", "-Xlint"),
-    resolvers += "spray" at "http://repo.spray.io/",
-    libraryDependencies ++= Seq(
+    resolvers            ++= Seq(
+      "spray" at "http://repo.spray.io/",
+      "Akka Snapshot Repository" at "http://repo.akka.io/snapshots/"),
+    libraryDependencies  ++= Seq(
       Akka.actor, Akka.testkit, protobuf, typesafeConfig, codec, Joda.time, Joda.convert,
       Specs2.core, Specs2.mock, mockito, Spray.json, Spray.client)
   )
@@ -25,7 +26,7 @@ object Build extends Build {
     val actor   = apply("actor")
     val testkit = apply("testkit") % "test"
 
-    private def apply(x: String) = "com.typesafe.akka" %% s"akka-$x" % "2.3.9"
+    private def apply(x: String) = "com.typesafe.akka" %% s"akka-$x" % "2.4-SNAPSHOT"
   }
 
   object Specs2 {
