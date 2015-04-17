@@ -5,11 +5,11 @@
 <table border="0">
   <tr>
     <td><a href="http://www.scala-lang.org">Scala</a> </td>
-    <td>2.10.4/2.11.5</td>
+    <td>2.11.5</td>
   </tr>
   <tr>
     <td><a href="http://akka.io">Akka</a> </td>
-    <td>2.3.9</td>
+    <td>2.4-SNAPSHOT</td>
   </tr>
 </table>
 
@@ -410,7 +410,7 @@ Using `application.conf` for configuration is more preferable option.
 
 * Sbt
 ```scala
-    libraryDependencies += "com.geteventstore" %% "eventstore-client" % "2.0.1"
+    libraryDependencies += "com.geteventstore" %% "eventstore-client" % "2.0.2"
 ```
 
 * Maven:
@@ -418,7 +418,7 @@ Using `application.conf` for configuration is more preferable option.
     <dependency>
         <groupId>com.geteventstore</groupId>
         <artifactId>eventstore-client_2.11</artifactId>
-        <version>2.0.1</version>
+        <version>2.0.2</version>
     </dependency>
 ```
 
@@ -428,6 +428,6 @@ or
     <dependency>
         <groupId>com.geteventstore</groupId>
         <artifactId>eventstore-client_2.10</artifactId>
-        <version>2.0.1</version>
+        <version>2.0.2</version>
     </dependency>
 ```
