@@ -8,7 +8,7 @@ object Build extends Build {
   lazy val basicSettings = Seq(
     name                 := "eventstore-client",
     organization         := "pl.newicom.dddd",
-    scalaVersion         := "2.11.5",
+    scalaVersion         := "2.11.6",
     licenses             := Seq("BSD 3-Clause" -> url("http://raw.github.com/EventStore/EventStore.JVM/master/LICENSE")),
     homepage             := Some(new URL("http://github.com/pawelkaczor/EventStore.JVM")),
     description          := "Event Store JVM Client",
