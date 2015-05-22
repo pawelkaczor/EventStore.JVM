@@ -1,12 +1,10 @@
 language: scala
 scala:
-  - "2.11.5"
+  - "2.11.6"
 script:
   - travis_retry sbt clean coverage test
 after_success: "sbt coverageReport coveralls"
 jdk:
-  - oraclejdk7
-  - openjdk7
   - oraclejdk8
 install:
   - sudo apt-get install build-essential
