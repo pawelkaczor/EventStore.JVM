@@ -14,9 +14,7 @@ object Build extends Build {
     description          := "Event Store JVM Client",
     startYear            := Some(2013),
     scalacOptions        := Seq("-encoding", "UTF-8", "-unchecked", "-deprecation", "-feature", "-Xlint"),
-    resolvers            ++= Seq(
-      "spray" at "http://repo.spray.io/",
-      "Akka Snapshot Repository" at "http://repo.akka.io/snapshots/"),
+    resolvers            ++= Seq("spray" at "http://repo.spray.io/"),
     libraryDependencies  ++= Seq(
       Akka.actor, Akka.testkit, protobuf, typesafeConfig, codec, Joda.time, Joda.convert,
       Specs2.core, Specs2.mock, mockito, Spray.json, Spray.client)
